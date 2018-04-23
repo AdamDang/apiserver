@@ -86,7 +86,7 @@ func (ps *Plugins) Register(name string, plugin Factory) {
 }
 
 // getPlugin creates an instance of the named plugin.  It returns `false` if the
-// the name is not known. The error is returned only when the named provider was
+// name is not known. The error is returned only when the named provider was
 // known but failed to initialize.  The config parameter specifies the io.Reader
 // handler of the configuration file for the cloud provider, or nil for no configuration.
 func (ps *Plugins) getPlugin(name string, config io.Reader) (Interface, bool, error) {
