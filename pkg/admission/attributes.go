@@ -128,7 +128,7 @@ func (record *attributesRecord) AddAnnotation(key, value string) error {
 		record.annotations = make(map[string]string)
 	}
 	if v, ok := record.annotations[key]; ok && v != value {
-		return fmt.Errorf("admission annotations are not allowd to be overwritten, key:%q, old value: %q, new value:%q", key, record.annotations[key], value)
+		return fmt.Errorf("admission annotations are not allowed to be overwritten, key:%q, old value: %q, new value:%q", key, record.annotations[key], value)
 	}
 	record.annotations[key] = value
 	return nil
